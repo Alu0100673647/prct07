@@ -20,7 +20,7 @@ desc "Ejecutar con formato html"
 task :thtml do
 	sh "rspec -I. test/fraccion_spec.rb --format html"
 end
-=end
+
 $:.unshift File.dirname(__FILE__) + 'lib'
 $:.unshift './lib', './spec'
 
@@ -32,3 +32,5 @@ desc "Ejecutar las espectativas de la clase Fraccion"
 task :local do
   sh "rspec -Ilib -Ispec spec/fraccion_spec.rb"
 end
+
+=end
