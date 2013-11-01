@@ -78,20 +78,8 @@ describe "Fraccion"do
 	    (@fraccion1 % @fraccion2).should == Fraccion.new(1,1)
 	end
 
-	it "Se debe de poder comprobar si una fracion es menor que otra" do
-                (@fraccion1 < @fraccion2).should == true          
-	end
-	
-	it "Se debe de poder comprobar si una fracion es mayor que otra" do
-		(@fraccion1 > @fraccion2).should == false
-	end
-	
-	it "Se debe de poder comprobar si una fracion es menor o igual que otra" do
-		(@fraccion1 <= @fraccion2) == true
-	end
-	
-	it "Se debe de poder comprobar si una fracion es mayor o igual que otra" do
-	(@fraccion1 >= @fraccion2).should == false
+	it "Se debe de poder comparar dos fracciones" do
+       (@fraccion1 <=> @fraccion2).should == -1         
 	end
 	
 end

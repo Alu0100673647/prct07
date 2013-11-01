@@ -82,31 +82,10 @@ class Fraccion
 	def %(frac)   		# Método que  calcula el resto dos fracciones con % y dar el resultado de forma reducida
 	   Fraccion.new(@numerador % @denominador, frac.numerador % frac.denominador)
 	end
-
-				#Método se debe de poder comprobar si una fracion es menor que otra
 			
- 	def <(frac)
-	   
-	    (@numerador.to_f / @denominador) < (frac.numerador.to_f / frac.denominador)
-	end			
-				#se debe de poder comprobar si una fracion es mayor que otra
-	def >(frac)
-	 
-	    (@numerador.to_f / @denominador) > (frac.numerador.to_f / frac.denominador)
+ 	def <=>(frac)
+	   self.to_f <=> frac.to_f	
 	end
-				#se debe de poder comprobar si una fracion es menor o igual que otra
-	
-	  def <=(frac)
-	   
-	    (@numerador.to_f / @denominador) <= (frac.numerador.to_f / frac.denominador)
-	end
-				#se debe de poder comprobar si una fracion es mayor o igual que otra
-	def >=(frac)
-	  
-	    (@numerador.to_f / @denominador) >= (frac.numerador.to_f / frac.denominador)
-	end
-
-	
 
 end
 	
